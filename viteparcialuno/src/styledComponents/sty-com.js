@@ -49,7 +49,7 @@ export const Subtitle = styled.div`
 
 //campos
 export const Campos = styled.div`
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
 `;
 
@@ -92,3 +92,10 @@ export const Linkisya = styled.div`
     font-size: 12px;
 `;
 
+export const Errxr = styled.p`
+	text-decoration: none;
+	margin: 0.5px;
+	color: red;
+	font-size: 10px;
+	
+`;

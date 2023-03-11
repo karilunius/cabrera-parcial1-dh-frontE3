@@ -1,25 +1,16 @@
-import React,{ useState } from "react";
-import { Loginn, Nombre } from "../styledComponents/sty-com2.js"
+import React from "react";
+import { Loginn, Nombre } from "../styledComponents/sty-com2.js";
 
-
-export const Login = (props) => {
-	
-	const { email, password, visibilidad } = props;
- 
-	/* const valor = { visibilidad } ? { display: "initial" } : { display: "none" };  */
-
+export const Login = ({email}) => {
+    console.log({email});
 	return (
 		<>
-			<Loginn /*  style={{display: "none"}}  */
-			>
+			<Loginn>
 				<h1>Bienvenid@</h1>
 				<br />
 				<p>Has ingresado a tu cuenta... </p>
-				<Nombre>{email}</Nombre>
-				
+				<Nombre>Hola, {email.valueOf().slice(0,-10)}</Nombre>
 			</Loginn>
 		</>
 	);
 };
-
-
