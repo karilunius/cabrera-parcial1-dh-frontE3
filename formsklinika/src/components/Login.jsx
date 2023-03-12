@@ -1,5 +1,5 @@
 import React from "react";
-import { Loginn, Nombre } from "../styledComponents/sty-com2.js";
+import { Loginn, Nombre } from "../styledComponents/sty-com-login.js";
 
 export const Login = ({email}) => {
     console.log({email});

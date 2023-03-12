@@ -94,8 +94,8 @@ export const Linkisya = styled.div`
 
 export const Errxr = styled.p`
 	text-decoration: none;
-	margin: 0.5px;
+	margin: 10px;
 	color: red;
 	font-size: 10px;
-	
+	height: 20px;
 `;

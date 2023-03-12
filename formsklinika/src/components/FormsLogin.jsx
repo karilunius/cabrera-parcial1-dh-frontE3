@@ -10,53 +10,53 @@ import {
 	Buttonkli,
 	Linkisya,
 	Errxr,
-} from "../styledComponents/sty-com";
+} from "../styledComponents/sty-com-form-log";
 import { Login } from "./Login.jsx";
 import "../../src/index.css";
-import { edadValidator } from "../js/validations.js";
+/* import { validacionEmail, validacionPassword, validaciones } from "../js/validations.js";  */
 
 const FormsLogin = () => {
-	//se coloca el estado (1)
+	//se coloca el estado
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [visibilidad, setVisibilidad] = useState(false);
-	const [validar, setValidar] = useState(false);
+	const [smserrar, setSmserrar] = useState(false);
 
 	// se controla el evento
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
+		console.log({ email }, { password }, { visibilidad }, { smserrar });
 
-		console.log({ email }, { password }, { visibilidad });
-
-		/* const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i; */
-		/* const passwordRegex = /^[0-9a-zA-Z]{6,}$/i; */
-
-        
 		let validacionEmail = false;
 		let validacionPassword = false;
 
-		if (email.length >= 5) {
-			console.log("Email es mayor a 5");
+		//email
+		if (email.length >= 15) {
+			console.log("Email es correcto.");
 			validacionEmail = true;
 		} else {
 			console.log("Email no puede ser menor a 5 caracteres.");
 			validacionEmail = false;
 		}
 
+		//password
 		if (password.length >= 3) {
-			console.log("Contraseña es mayor a 3");
+			console.log("Contraseña es correcta.");
 			validacionPassword = true;
 		} else {
 			console.log("Contraseña no puede ser menor a 3 caracteres.");
 			validacionPassword = false;
 		}
 
+		//validacion
 		if (validacionEmail === true && validacionPassword === true) {
-			setValidar(false);
+			console.log("validación completada.");
+			setSmserrar(false);
 			setVisibilidad(true);
 		} else {
-			setValidar(true);
+			console.log("validación no es correcta.");
+			setSmserrar(true);
 			setVisibilidad(false);
 		}
 	};
@@ -77,7 +77,7 @@ const FormsLogin = () => {
 							onChange={(e) => setEmail(e.target.value)}
 							autoComplete="email"
 						></input>
-						{validar && <Errxr>Email no tiene el formato correcto.</Errxr>}
+						{smserrar && <Errxr>Email no tiene el formato correcto.</Errxr>}
 					</UseryPass>
 					<br></br>
 					<br></br>
@@ -89,17 +89,12 @@ const FormsLogin = () => {
 							onChange={(e) => setPassword(e.target.value)}
 							autoComplete="current-password"
 						></input>
-						{validar && <Errxr>La contraseña tiene el formato incorrecto.</Errxr>}
+						{smserrar && (
+							<Errxr>La contraseña no tiene el formato correcto.</Errxr>
+						)}
 					</UseryPass>
 					<br></br>
-					<br></br> 
-					<Buttonkli
-						id="buttonf"
-						form="login-form"
-						btn="submit"
-						type="submit"
-						onClick={(e) => setVisibilidad(true)}
-					>
+					<Buttonkli id="buttonf" form="login-form" btn="submit" type="submit">
 						Ingresar
 					</Buttonkli>
 				</Campos>
@@ -108,7 +103,7 @@ const FormsLogin = () => {
 					<p href="#">Olvidé la contraseña</p>
 				</Linkisya>
 			</Form>
-			{visibilidad && <Login email={email}/>}
+			{visibilidad && <Login email={email} />}
 		</Fragment>
 	);
 };
