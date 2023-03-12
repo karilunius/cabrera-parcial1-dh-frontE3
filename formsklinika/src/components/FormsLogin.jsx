@@ -13,6 +13,7 @@ import {
 } from "../styledComponents/sty-com";
 import { Login } from "./Login.jsx";
 import "../../src/index.css";
+import { edadValidator } from "../js/validations.js";
 
 const FormsLogin = () => {
 	//se coloca el estado (1)
@@ -31,7 +32,7 @@ const FormsLogin = () => {
 		/* const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i; */
 		/* const passwordRegex = /^[0-9a-zA-Z]{6,}$/i; */
 
-
+        
 		let validacionEmail = false;
 		let validacionPassword = false;
 
