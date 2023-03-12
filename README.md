@@ -8,7 +8,8 @@ repositorio con material educativo 2023
 ##Formulario de Login 
 - [x] Inputs de email y password 
 - [x] Card de ingreso de login 
-- [x] Uso de validaciones, styled components.
+- [x] Uso de styled components.
+- [x] Uso de validaciones (no completado exitosamente)
 
 
 ##imgs
