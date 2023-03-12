@@ -9,7 +9,9 @@ repositorio con material educativo 2023
 - [x] Inputs de email y password 
 - [x] Card de ingreso de login 
 - [x] Uso de styled components.
-- [x] Uso de validaciones (no completado exitosamente)
+- [ ] Uso de validaciones ( Se hizo un tipo de prueba de validación con correo carito@gmail.com y password 1234567 (correcto) pero estados no cambiaron. )
+                          ( Se hizo un tipo de prueba de valdiación con correo carito@gmail.com y pasword 12 (correcto) pero muestra sms error en ambas inputs.) 
+                          ( los estados validar y smsmerrar deberian de actualizarse por los if pero queda en el estado declarado al inicio)
 
 
 ##imgs
