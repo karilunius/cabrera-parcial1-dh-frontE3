@@ -1,0 +1,31 @@
+
+--onchange
+/* {...register("email", {
+								required: true,
+								pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
+							})} */
+
+--luego de >  <  en autocomplete
+
+{/* {errors.email?.type === "pattern" && (
+								<p>El formato del email es incorrecto</p>
+							)} */}
+
+
+{...register("password", { required: true, maxLength: 10 })}
+							autoComplete="password"
+                            
+{errors.password?.type === "required" && (
+								<p>La contraseña es requerida</p>
+							)}
+							{errors.password?.type === "maxLength" && (
+								<p>La contraseña debe tener menos de 10 caracteres</p>
+							)}       
+
+
+	${(props) => (props.visibilidad ? "display:none" : "display:initial")}						                                               
+
+
+    npm install formik --save
+	npm install yup --save
+	
