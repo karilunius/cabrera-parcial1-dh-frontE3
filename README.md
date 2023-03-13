@@ -8,7 +8,7 @@ repositorio con material educativo 2023
 ## Formulario de Login 
 - [X] Temática: clinica odontológica - login (la usé el semestre anterior en backend)
 - [x] Dos Inputs de email y password
-     -- nota: no se trabajo con regex , solo las validaciones como la consigna del examen.
+  -- nota: no se trabajÓ con regex , solo las validaciones como pide la consigna del examen.
      -- Email no puede ser menor a 5 caracteres.
      -- Contraseña no puede ser menor a 3 caracteres.
 - [x] El formulario arroja una card de ingreso cuando la validación es correcta.  
